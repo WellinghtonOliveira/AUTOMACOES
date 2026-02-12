@@ -26,123 +26,50 @@ CORPO_HTML    = """
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pesquisa de Viabilidade Técnica</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f0f2f5;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-  }
-
-  .container {
-    max-width: 500px;
-    margin: 20px auto;
-    background: #ffffff;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  }
-
-  h1 {
-    font-size: 20px;
-    color: #1a365d;
-    line-height: 1.3;
-  }
-
-  p {
-    line-height: 1.6;
-    font-size: 15px;
-    color: #4a5568;
-  }
-
-  .highlight-box {
-    background: #f8fafc;
-    border-left: 4px solid #2563eb;
-    padding: 15px;
-    margin: 20px 0;
-    font-style: italic;
-  }
-
-  .btn {
-    display: block;
-    text-align: center;
-    background: #2563eb;
-    color: #ffffff !important;
-    text-decoration: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-bottom: 12px;
-    transition: background 0.3s ease;
-  }
-
-  .btn:hover {
-    background: #1d4ed8;
-  }
-
-  .btn-secondary {
-    background: #ffffff;
-    color: #2563eb !important;
-    border: 1px solid #2563eb;
-  }
-
-  .btn-secondary:hover {
-    background: #f1f5f9;
-  }
-
-  .footer {
-    font-size: 12px;
-    color: #94a3b8;
-    text-align: center;
-    margin-top: 30px;
-  }
-</style>
+<title>Dúvida rápida</title>
 </head>
 
-<body>
-  <div class="container">
-    <h1>Análise de Retenção de Pacientes</h1>
-    
-    <p>
-      Olá, estou desenvolvendo uma ferramenta específica para clínicas que desejam 
-      <strong>blindar sua reputação online</strong>. 
+<body style="font-family: Arial, sans-serif; background:#f5f7fa; padding:20px;">
+
+  <div style="max-width:520px; margin:auto; background:#ffffff; padding:30px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.06);">
+
+    <h2 style="color:#1f2937; margin-top:0;">
+      Dúvida rápida sobre avaliações no Google
+    </h2>
+
+    <p style="color:#374151; font-size:15px; line-height:1.6;">
+      Olá, tudo bem?
     </p>
 
-    <p>
-      Estudos mostram que 70% dos pacientes leem avaliações antes de agendar. Uma resposta profissional em tempo hábil pode converter uma crítica em uma nova oportunidade.
+    <p style="color:#374151; font-size:15px; line-height:1.6;">
+      Estou conversando com algumas clínicas de estética para entender uma coisa:
+      <strong>quando surge uma avaliação negativa no Google, vocês conseguem responder rápido ou às vezes passa despercebido?</strong>
     </p>
 
-    <div class="highlight-box">
-      "Se uma solução automatizada evitasse a perda de apenas um paciente por mês, isso teria valor estratégico para sua clínica hoje?"
-    </div>
+    <p style="color:#374151; font-size:15px; line-height:1.6;">
+      Estou estudando criar uma ferramenta simples apenas para avisar e ajudar na resposta.
+      Queria saber se isso teria utilidade para vocês.
+    </p>
 
-    <a class="btn" href="mailto:seu-email@dominio.com?subject=Interesse: Monitoramento de Avaliações&body=Olá, gostaria de saber mais sobre como funciona a validação desse serviço de monitoramento para minha clínica.">
-      Sim, gostaria de mais informações
+    <a href="mailto:seuemail@dominio.com?subject=Resposta rápida&body=Olá! Hoje nós ________ avaliações negativas."
+       style="display:block; text-align:center; background:#2563eb; color:#ffffff; text-decoration:none; padding:14px; border-radius:8px; font-weight:bold; margin-top:25px;">
+       Responder rápido
     </a>
 
-    <a class="btn btn-secondary" href="mailto:seu-email@dominio.com?subject=Consulta: Site Institucional Profissional&body=Olá, vi que você também desenvolve sites. Poderia me enviar informações sobre prazos e modelos para clínicas?">
-      Preciso de um site profissional
-    </a>
-
-    <p style="font-size: 13px; margin-top: 20px;">
-      <em>Basta clicar em uma das opções acima para me enviar uma resposta automática.</em>
+    <p style="font-size:12px; color:#9ca3af; text-align:center; margin-top:25px;">
+      Pesquisa rápida de mercado • resposta leva menos de 30 segundos
     </p>
 
-    <div class="footer">
-      Pesquisa de mercado conduzida por DEVs<br>
-      Foco em Desenvolvimento de Software e Experiência do Paciente.
-    </div>
   </div>
+
 </body>
 </html>
+
 """  # (seu HTML continua igual)
 ARQ_LISTA     = "emails.txt"
-DELAY_SEG     = 10
+DELAY_SEG     = 120
 ARQ_PROGRESSO = "progresso.json"  # ← ADICIONADO
-LIMITE_POR_EXEC = 10              # ← ADICIONADO
+LIMITE_POR_EXEC = 30              # ← ADICIONADO
 # -----------------------------------
 
 ordemEmail = 0
