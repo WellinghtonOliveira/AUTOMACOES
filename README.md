@@ -13,8 +13,3 @@ Este repositório centraliza scripts e aplicações criadas para:
 - 📊 Organizar fluxos de trabalho  
 - 🧠 Testar e validar novas ideias de automação  
 - 🛠 Criar soluções reutilizáveis e escaláveis  
-
----
-
-## 📂 Estrutura do Repositório
-
