@@ -18,6 +18,7 @@ load_dotenv()
 
 #==================
 
+indexCount = 1
 REMETENTE     = ""
 SENHA         = ""
 SERVIDOR_SMTP = "smtp.gmail.com"
@@ -72,10 +73,10 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARQ_LISTA = os.path.join(BASE_DIR, "emails.txt")
 DELAY_SEG     = 30
 ARQ_PROGRESSO = os.path.join(BASE_DIR, "progresso.json")  # ← ADICIONADO
-LIMITE_POR_EXEC = 30              # ← ADICIONADO
+LIMITE_POR_EXEC = 40              # ← ADICIONADO
 # -----------------------------------
 
-ordemEmail = 1
+ordemEmail = 0
 
 if ordemEmail == 0:
     REMETENTE = os.getenv("EMAIL_1")
@@ -100,10 +101,10 @@ def salvar_progresso(index: int):
     with open(ARQ_PROGRESSO, "w", encoding="utf-8") as f:
         json.dump({"index": index}, f)
 
-indexCount = 1
 
 def enviar_para(dest: str, remetente: str, senha: str,
                 servidor: str, porta: int, assunto: str, html: str) -> None:
+    global indexCount
     msg = EmailMessage()
     msg["Subject"] = assunto
     msg["From"] = remetente
