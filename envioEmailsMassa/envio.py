@@ -76,7 +76,7 @@ ARQ_PROGRESSO = os.path.join(BASE_DIR, "progresso.json")  # ← ADICIONADO
 LIMITE_POR_EXEC = 40              # ← ADICIONADO
 # -----------------------------------
 
-ordemEmail = 0
+ordemEmail = 1
 
 if ordemEmail == 0:
     REMETENTE = os.getenv("EMAIL_1")
