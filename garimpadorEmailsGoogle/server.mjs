@@ -10,7 +10,7 @@ const LIMIT = 50;                // Comece com menos para testar
 
 const limit = pLimit(CONC);
 const seen = new Set(
-    fs.existsSync(OUT_FILE)
+    fs.existsSync(OUT_FILE) 
         ? fs.readFileSync(OUT_FILE, 'utf8').split(/\r?\n/).filter(Boolean)
         : []
 );
