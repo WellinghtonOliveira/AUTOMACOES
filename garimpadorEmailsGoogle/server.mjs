@@ -18,7 +18,7 @@ let saved = 0;
 
 function appendEmail(email) {
     const e = email.toLowerCase();
-    if (seen.has(e)) return;
+    if (seen.has(e)) return; 
     seen.add(e);
     fs.appendFileSync(OUT_FILE, e + '\n');
     saved++;
